@@ -1,11 +1,14 @@
 package com.raman.springboottodoapp.todo;
 
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 
 public class Todo {
 
     private int id;
     private String name;
+    @Size(min = 10, message = "Enter at-least 10 characters")
     private String description;
     private LocalDate date;
     private boolean done;
