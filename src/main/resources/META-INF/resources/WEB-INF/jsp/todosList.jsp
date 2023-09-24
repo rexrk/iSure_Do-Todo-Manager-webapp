@@ -1,14 +1,9 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <link href="webjars/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <title>Todo List- Todo Manager</title>
-</head>
-<body>
+<%@include file="common/header.jspf" %>
+<%@include file="common/navigation.jspf" %>
 <div class="container">
     <div>
-        <h1>Your Todos :</h1>
+        <h2 class="text-black mb-3">Your To-Dos</h2>
+        <hr>
         <table class="table">
             <thead>
             <tr>
@@ -27,8 +22,8 @@
                     <td>${todo.description}</td>
                     <td>${todo.date}</td>
                     <td>${todo.done}</td>
-                    <td><a href="delete-todo?id=${todo.id}" class="btn btn-danger">DELETE</a></td>
-                    <td><a href="update-todo?id=${todo.id}" class="btn btn-primary">UPDATE</a></td>
+                    <td><a href="update-todo?id=${todo.id}" class="btn btn-primary btn-sm">Update</a></td>
+                    <td><a href="delete-todo?id=${todo.id}" class="btn btn-danger btn-sm">Delete</a></td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -36,7 +31,4 @@
     </div>
     <a href="add-todo" class="btn btn-success">Add Todo</a>
 </div>
-<script src="webjars/bootstrap/5.3.0/js/bootstrap.min.js"></script>
-<script src="webjars/jquery/3.7.1/dist/jquery.min.js"></script>
-</body>
-</html>
+<%@include file="common/footer.jspf" %>

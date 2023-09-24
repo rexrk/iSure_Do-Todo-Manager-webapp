@@ -1,14 +1,8 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <link href="webjars/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
-    <title>Welcome - Todo Manager</title>
-</head>
-<body>
+<%@include file="common/header.jspf" %>
+<%@include file="common/navigation.jspf" %>
 <div class="container">
-    <h1>Welcome ${name}</h1>
+    <h1 class="mb-3">Welcome ${name}</h1>
     <hr>
-    <a href="list-todos">Manage Your Todos</a>
+    <a href="list-todos">Manage</a> Your Todos
 </div>
-</body>
-</html>
+<%@include file="common/footer.jspf" %>
