@@ -13,6 +13,7 @@ public class TodoService {
 
     private static final List<Todo> todoList = new ArrayList<>();
     private static int id = 0;
+
     static {
         todoList.add(new Todo(++id, "Raman", "Learn Spring Boot",
                 LocalDate.now().plusYears(1), false));
@@ -43,6 +44,7 @@ public class TodoService {
     }
     public void updateTodo(@Valid Todo todo) {
         deleteById(todo.getId());
-        todoList.add(todo); 
+        todoList.add(todo);
+
     }
 }

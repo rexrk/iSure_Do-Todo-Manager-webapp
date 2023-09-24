@@ -6,7 +6,6 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.2.0-M2</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.raman</groupId>
     <artifactId>spring-boot-todo-app</artifactId>
@@ -44,6 +43,11 @@
             <version>5.3.0</version>
         </dependency>
         <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap-datepicker</artifactId>
+            <version>1.10.0</version>
+        </dependency>
+        <dependency>
             <groupId>org.webjars.bower</groupId>
             <artifactId>jquery</artifactId>
             <version>3.7.1</version>
@@ -75,7 +79,6 @@
         <repository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
@@ -85,7 +88,6 @@
         <pluginRepository>
             <id>spring-milestones</id>
             <name>Spring Milestones</name>
-            <url>https://repo.spring.io/milestone</url>
             <snapshots>
                 <enabled>false</enabled>
             </snapshots>
