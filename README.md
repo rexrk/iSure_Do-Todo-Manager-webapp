@@ -21,7 +21,9 @@
         - @Valid
         - Binding Result
 * spring mvc date formatter
-* 
+* spring boot starter security
+* InMemoryUserDetailsManager, UserDetails
+* Password Encoder, BCryptPasswordEncoder, 
 
 ### Guides
 * **Change Server Port** (app-props file) : ```server.port=????```
