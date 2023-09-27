@@ -16,7 +16,7 @@
             </fieldset>
             <sf:input type="hidden" path="id"/>
             <sf:input type="hidden" path="done"/>
-            <input type="submit" class="btn btn-success"/>
+            <input type="submit" class="btn btn-primary"/>
         </sf:form>
     </div>
 </div>
