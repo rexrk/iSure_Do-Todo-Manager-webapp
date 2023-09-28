@@ -1,11 +1,17 @@
 package com.raman.springboottodoapp.todo;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.Size;
 
 import java.time.LocalDate;
 
+@Entity
 public class Todo {
 
+    @Id
+    @GeneratedValue
     private int id;
     private String name;
     @Size(min = 10, message = "Enter at-least 10 characters")
@@ -13,12 +19,8 @@ public class Todo {
     private LocalDate date;
     private boolean done;
 
-    public boolean isDone() {
-        return done;
-    }
+    public Todo() {
 
-    public void setDone(boolean done) {
-        this.done = done;
     }
 
     public Todo(int id, String name, String description, LocalDate date, boolean done) {
@@ -28,6 +30,8 @@ public class Todo {
         this.date = date;
         this.done = done;
     }
+
+
 
     public int getId() {
         return id;
@@ -61,6 +65,13 @@ public class Todo {
         this.date = date;
     }
 
+    public boolean isDone() {
+        return done;
+    }
+
+    public void setDone(boolean done) {
+        this.done = done;
+    }
 
     @Override
     public String toString() {

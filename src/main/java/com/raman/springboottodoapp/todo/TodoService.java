@@ -14,20 +14,7 @@ public class TodoService {
     private static final List<Todo> todoList = new ArrayList<>();
     private static int id = 0;
 
-    static {
-        todoList.add(new Todo(++id, "Raman", "Learn Spring Boot",
-                LocalDate.now().plusYears(1), false));
-        todoList.add(new Todo(++id, "Raman", "Learn Cloud native",
-                LocalDate.now().plusYears(2), false));
-        todoList.add(new Todo(++id, "Raman", "Learn DevOps",
-                LocalDate.now().plusYears(3), false));
-        todoList.add(new Todo(++id, "rexrk", "Learn Android",
-                LocalDate.now().plusYears(3), false));
-        todoList.add(new Todo(++id, "rexrk", "Do Open Source Contribution",
-                LocalDate.now().plusYears(3), false));
-    }
-
-    public List<Todo> getTodos(String name) {
+    public List<Todo> findByName(String name) {
         Predicate<? super Todo> predicate = todo -> todo.getName().equalsIgnoreCase(name);
         return todoList.stream().filter(predicate).toList();
     }
