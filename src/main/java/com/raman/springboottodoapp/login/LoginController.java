@@ -17,13 +17,13 @@ public class LoginController {
         this.authenticationService = authenticationService;
     }
 
-    @RequestMapping(value = "login", method = RequestMethod.GET)
+    @RequestMapping(value = "login-page", method = RequestMethod.GET)
     public String loginPage() {
         return "login";
 
     }
 
-    @RequestMapping(value = "login", method = RequestMethod.POST)
+    @RequestMapping(value = "login-page", method = RequestMethod.POST)
     public String welcomePage(@RequestParam String name, @RequestParam String password, ModelMap model) {
         if(authenticationService.authenticate(name, password)) {
             model.put("name", name);

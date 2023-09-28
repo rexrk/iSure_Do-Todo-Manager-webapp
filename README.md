@@ -24,6 +24,7 @@
 * spring boot starter security
 * InMemoryUserDetailsManager, UserDetails
 * Password Encoder, BCryptPasswordEncoder, 
+* Authentication from spring SecurityContextHolder
 
 ### Guides
 * **Change Server Port** (app-props file) : ```server.port=????```
