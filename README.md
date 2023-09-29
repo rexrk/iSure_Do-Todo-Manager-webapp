@@ -26,7 +26,9 @@
 * Password Encoder, BCryptPasswordEncoder, 
 * Authentication from spring SecurityContextHolder
 * Re-implement SecurityFilterChain : Defines a filter chain matched against every request
-* 
+* h2 integration
+* mysql on docker 
+* mysql integration
 
 ### Guides
 * **Change Server Port** (app-props file) : ```server.port=????```
